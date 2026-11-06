@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-AO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Criar conta · Ponte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+<div class="auth">
+  <aside class="auth__lado">
+    <a class="brand-sm" href="../index.html">Ponte</a>
+    <p>Uma candidatura bem preparada começa com quem já passou por ela.</p>
+  </aside>
+  <main class="auth__form">
+    <form>
+      <h1>Criar conta</h1>
+      <label>Nome completo <input type="text" name="nome" autocomplete="name"></label>
+      <label>Email <input type="email" name="email" autocomplete="email" placeholder="o.teu@email.com"></label>
+      <label>Telefone <input type="tel" name="telefone" autocomplete="tel"></label>
+      <fieldset class="radios">
+        <label><input type="radio" name="perfil" value="candidato" checked> Quero candidatar-me</label>
+        <label><input type="radio" name="perfil" value="mentor"> Quero ser mentor</label>
+      </fieldset>
+      <label>Senha <input type="password" name="senha" autocomplete="new-password"></label>
+      <label>Confirmar senha <input type="password" name="confirmar" autocomplete="new-password"></label>
+      <label class="check"><input type="checkbox" name="termos"> Aceito os termos de utilização</label>
+      <button class="btn" type="button">Criar conta</button>
+      <p class="alt">Já tens conta? <a class="link" href="login.html">Entrar</a></p>
+    </form>
+  </main>
+</div>
+</body>
+</html>

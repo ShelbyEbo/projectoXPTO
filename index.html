@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-AO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ponte · Bolsas de estudo e mentorias</title>
+  <meta name="description" content="Encontra bolsas de estudo com o prazo à vista e mentores que já passaram por elas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/index.css">
+  <script src="JS/core.js" defer></script>
+  <script src="JS/index.js" defer></script>
+</head>
+<body>
+  <div class="wrap lnav">
+    <a class="brand-sm" href="index.html">Ponte</a>
+    <nav>
+      <a href="pages/bolsas.html">Bolsas</a>
+      <a href="pages/bolsas.html?tab=mentorias">Mentorias</a>
+      <a class="btn btn--ghost" style="color:var(--ink)" href="pages/login.html">Entrar</a>
+      <a class="btn" href="pages/cadastro.html">Criar conta</a>
+    </nav>
+  </div>
+
+  <header class="wrap hero">
+    <div class="hero__txt rise">
+      <h1>Bolsas com o prazo à vista. <em>Mentores</em> que já passaram por elas.</h1>
+      <p>Descobre onde te podes candidatar, acompanha cada passo e pede ajuda a quem já fez o caminho.</p>
+      <div class="cta">
+        <a class="btn" href="pages/bolsas.html">Ver bolsas</a>
+        <a class="link" href="#como-funciona">Como funciona</a>
+      </div>
+    </div>
+    <div class="rise" style="--i:2">
+      <p class="prazos-t">Próximos prazos</p>
+      <ul class="prazos" id="prazos"></ul>
+    </div>
+  </header>
+
+  <section class="wrap sectionl reveal" id="como-funciona">
+    <h2>Da procura ao comprovativo em três passos</h2>
+    <ol class="tres">
+      <li><h3>Encontra</h3><p>Filtra bolsas por nível e vê logo quantos dias faltam para cada candidatura.</p></li>
+      <li><h3>Prepara</h3><p>Segue a lista de passos da candidatura e inscreve-te numa mentoria ligada à bolsa.</p></li>
+      <li><h3>Candidata-te</h3><p>Submete os teus dados e recebe o comprovativo com número de protocolo.</p></li>
+    </ol>
+  </section>
+
+  <section class="wrap sectionl reveal">
+    <div class="duo">
+      <article class="painel painel--a">
+        <h3>Quero candidatar-me</h3>
+        <ul><li>Prazos ordenados, os urgentes em destaque</li><li>Passos da candidatura com progresso</li><li>Mentor a um contacto de distância</li></ul>
+        <a class="btn" href="pages/bolsas.html">Ver bolsas</a>
+      </article>
+      <article class="painel painel--b">
+        <h3>Quero ser mentor</h3>
+        <ul><li>Publica a tua oferta ligada a uma bolsa</li><li>Recebe inscrições de quem precisa de ajuda</li><li>Combina o contacto por WhatsApp ou email</li></ul>
+        <a class="btn" href="pages/bolsas.html?tab=mentorias">Oferecer mentoria</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="fim reveal">
+    <div class="wrap">
+      <h2>O próximo prazo não espera.</h2>
+      <a class="btn" style="background:#fff;color:var(--ink)" href="pages/bolsas.html">Começar agora</a>
+    </div>
+  </section>
+
+  <footer class="wrap rodape">Projecto de demonstração: sem servidor, os dados ficam guardados no teu navegador.</footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-AO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bolsas e mentorias · Ponte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/index.css">
+  <script src="../JS/core.js" defer></script>
+  <script src="../JS/bolsas.js" defer></script>
+</head>
+<body>
+  <header class="top top--slim">
+    <div class="wrap">
+      <a class="brand-sm" href="../index.html">Ponte</a>
+      <nav class="nav">
+        <a class="btn btn--ghost" href="login.html">Entrar</a>
+        <a class="btn btn--ghost" href="minhas.html">O meu painel</a>
+        <button class="btn btn--ghost" id="export" type="button">Exportar</button>
+        <button class="btn" id="publish" type="button">Publicar</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap page">
+    <h1 class="page-title">Bolsas e mentorias</h1>
+    <div class="bar">
+      <div class="tabs" role="tablist" aria-label="Secção">
+        <button role="tab" id="tab-bolsas" aria-selected="true" aria-controls="list">Bolsas</button>
+        <button role="tab" id="tab-mentorias" aria-selected="false" aria-controls="list">Mentorias</button>
+      </div>
+      <input id="q" type="search" placeholder="Procurar por nome, país ou área" aria-label="Procurar">
+      <select id="nivel" aria-label="Nível">
+        <option value="">Todos os níveis</option>
+        <option>Licenciatura</option><option>Mestrado</option><option>Doutoramento</option>
+      </select>
+      <label class="check"><input id="favs" type="checkbox"> Só guardadas</label>
+    </div>
+    <p id="focus" class="focus" hidden></p>
+    <ul id="list" class="list" role="tabpanel"></ul>
+  </main>
+
+  <dialog id="dlg">
+    <form id="form" method="dialog">
+      <h2>Publicar</h2>
+      <label>O que queres publicar?
+        <select name="kind"><option value="bolsa">Uma bolsa de estudo</option><option value="mentoria">Uma oferta de mentoria</option></select>
+      </label>
+      <div data-for="bolsa">
+        <label>Título <input name="titulo" maxlength="90"></label>
+        <label>Entidade <input name="entidade" maxlength="60"></label>
+        <label>País <input name="pais" maxlength="40"></label>
+        <label>Nível <select name="nivelb"><option>Licenciatura</option><option>Mestrado</option><option>Doutoramento</option></select></label>
+        <label>Prazo de candidatura <input name="prazo" type="date"></label>
+        <label>Ligação oficial <input name="link" type="url" placeholder="https://"></label>
+      </div>
+      <div data-for="mentoria" hidden>
+        <label>O teu nome <input name="nome" maxlength="60"></label>
+        <label>Área ou curso <input name="area" maxlength="60"></label>
+        <label>Bolsa que acompanhas <select name="bolsaId"></select></label>
+        <label>Como podes ajudar <textarea name="oferta" rows="3" maxlength="200" placeholder="Ex.: revejo a carta de motivação e simulo a entrevista"></textarea></label>
+        <label>WhatsApp (só números, com indicativo) ou email <input name="contacto" maxlength="60"></label>
+      </div>
+      <p class="err" id="err" role="alert"></p>
+      <div class="actions">
+        <button class="btn btn--ghost" value="cancel" formnovalidate>Cancelar</button>
+        <button class="btn" id="save" type="submit" value="ok">Publicar</button>
+      </div>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status"></div>
+</body>
+</html>
